@@ -21,6 +21,8 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
+        JAVA_HOME = "/usr/lib/jvm/java-21-openjdk-amd64"
+        PATH = "${JAVA_HOME}/bin:${env.PATH}"
         SONAR_URL = "http://192.168.1.120:9000"
       }
       steps {
