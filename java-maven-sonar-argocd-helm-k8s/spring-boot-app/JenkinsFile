@@ -29,7 +29,8 @@ pipeline {
                 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
                 export PATH=$JAVA_HOME/bin:$PATH
                 cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
-                mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'''
+                mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}
+'''
         }
     }
 }
