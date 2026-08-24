@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       tools {
-        jdk 'JDK17' // Replace 'JDK17' with the exact name configured under Jenkins -> Manage Jenkins -> Tools -> JDK
+        jdk 'JDK17' 
       }
       environment {
         SONAR_URL = "http://192.168.1.120:9000"
